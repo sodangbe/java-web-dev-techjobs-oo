@@ -24,7 +24,6 @@ public class CoreCompetency {
         return value;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -32,6 +31,8 @@ public class CoreCompetency {
         CoreCompetency that = (CoreCompetency) o;
         return id == that.id;
     }
+
+
 
     @Override
     public int hashCode() {
@@ -45,8 +46,8 @@ public class CoreCompetency {
         return value;
     }
 
-    public void setValue(String aValue) {
-        this.value = aValue;
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public int getId() {
