@@ -39,4 +39,17 @@ public class JobTest {
 
         assertFalse(test_job3.equals(test_job4));
     }
+
+    @Test
+    public void testForToString(){
+        Job test_job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String Output = String.format("\nID: %s\nName: %s\nEmployer: %s " +
+                                      "\nLocation: %s \nPosition Type: %s " +
+                                      "\nCore Competency: %s",test_job5.getId(),test_job5.getName(),test_job5.getEmployer(),test_job5.getLocation(),test_job5.getPositionType(),test_job5.getCoreCompetency());
+
+        assertTrue(test_job5.toString().contentEquals(Output));
+
+    }
+
+
 }

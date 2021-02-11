@@ -21,6 +21,9 @@ public class CoreCompetency {
 
     @Override
     public String toString() {
+        if (this.value.equals(null) || this.value.isEmpty()){
+            return ("Data not available");
+        }
         return value;
     }
 
@@ -42,9 +45,7 @@ public class CoreCompetency {
     // TODO: Use the "Generate" tool to add a getter and setter for the 'value' field but
     //  ONLY a getter for the 'id' field.
 
-    public String getValue() {
-        return value;
-    }
+    public String getValue() {return value;}
 
     public void setValue(String value) {
         this.value = value;

@@ -53,6 +53,9 @@ public class Job {
 
 
     public String getName() {
+        if(this.name.equals(null) || this.name.isEmpty()){
+            return "Data not available ";
+        }
         return name;
     }
 
@@ -61,6 +64,7 @@ public class Job {
     }
 
     public Employer getEmployer() {
+
         return employer;
     }
 
@@ -95,4 +99,12 @@ public class Job {
     public int getId() {
         return id;
     }
+    @Override
+    public String toString(){
+        String Output = String.format("\nID: %s\nName: %s\nEmployer: %s " +
+                "\nLocation: %s \nPosition Type: %s " +
+                "\nCore Competency: %s",getId(),getName(),getEmployer(),getLocation(),getPositionType(),getCoreCompetency());
+
+        return Output;
+    };
 }
