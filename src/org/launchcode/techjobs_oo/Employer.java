@@ -9,9 +9,4 @@ public class Employer extends JobField {
         super(value);
     }
 
-    // Custom toString, equals, and hashCode methods:
-
-
-
-
 }
