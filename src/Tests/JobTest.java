@@ -43,11 +43,22 @@ public class JobTest {
     @Test
     public void testForToString(){
         Job test_job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        String Output = String.format("\nID: %s\nName: %s\nEmployer: %s " +
+        String output = String.format("\nID: %s\nName: %s\nEmployer: %s " +
                                       "\nLocation: %s \nPosition Type: %s " +
                                       "\nCore Competency: %s",test_job5.getId(),test_job5.getName(),test_job5.getEmployer(),test_job5.getLocation(),test_job5.getPositionType(),test_job5.getCoreCompetency());
 
-        assertTrue(test_job5.toString().contentEquals(Output));
+        assertTrue(test_job5.toString().contentEquals(output));
+
+    }
+
+    @Test
+    public void testForEmptyToString (){
+        Job test_job5 = new Job("Product tester", new Employer("ACME"), new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String output = String.format("\nID: %s\nName: %s\nEmployer: %s " +
+                "\nLocation: %s \nPosition Type: %s " +
+                "\nCore Competency: %s",test_job5.getId(),test_job5.getName(),test_job5.getEmployer(),test_job5.getLocation(),test_job5.getPositionType(),test_job5.getCoreCompetency());
+
+        assertTrue(test_job5.toString().contentEquals(output));
 
     }
 
